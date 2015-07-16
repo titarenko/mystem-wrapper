@@ -1,5 +1,5 @@
 {
-  "name": "mystem",
+  "name": "mystem-wrapper",
   "version": "0.1.0",
   "description": "Yandex mystem app wrapper module",
   "main": "index.js",

@@ -1,13 +1,13 @@
-# mystem
+# mystem-wrapper
 
-Yandex `mystem` app wrapper module.
+The only one clean, simple and performant Yandex `mystem` app wrapper module.
 
 Read about `mystem` [here](https://tech.yandex.ru/mystem/). Shorly, application `mystem` does morphological analysis of texts written in Russian language.
 
 ## Installation
 
 ```bash
-npm i mystem --save
+npm i mystem-wrapper --save
 ```
 
 Then put `mystem` app binary file (compiled for your OS) to `bin` subfolder of `mystem` module's folder. Binaries can be found [here](https://tech.yandex.ru/mystem/).
@@ -17,7 +17,7 @@ Then put `mystem` app binary file (compiled for your OS) to `bin` subfolder of `
 There are two methods: `analyze(text)` and `close()`, both return promise (in first case promise will be resolved with analysis results).
 
 ```js
-var mystem = require('mystem');
+var mystem = require('mystem-wrapper');
 
 mystem
 	.analyze('Жили у бабуси два веселых гуся.')
