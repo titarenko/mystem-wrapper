@@ -3,7 +3,9 @@ var Promise = require('bluebird');
 var byline = require('byline');
 var _ = require('lodash');
 
-var mystem = spawn('./bin/mystem', ['-ig', '--format', 'json'], { stdio: 'pipe' });
+var processParams = ['-ig', '--format', 'json'];
+var mySteamBinPath  = process.env.MYSTEM_PATH || './bin/mystem';
+var mystem = spawn(mySteamBinPath , processParams, { stdio: 'pipe' });
 var queue = [];
 
 function getData (data) {
