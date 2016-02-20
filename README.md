@@ -2,7 +2,9 @@
 
 The only one clean, simple and performant Yandex `mystem` app wrapper module.
 
-Read about `mystem` [here](https://tech.yandex.ru/mystem/). Shorly, application `mystem` does morphological analysis of texts written in Russian language.
+Read about `mystem` [here](https://tech.yandex.ru/mystem/). Shorly,
+application `mystem` does morphological analysis of texts written in Russian
+language.
 
 ## Installation
 
@@ -10,14 +12,20 @@ Read about `mystem` [here](https://tech.yandex.ru/mystem/). Shorly, application 
 npm i mystem-wrapper --save
 ```
 
-Then put `mystem` app binary file (compiled for your OS) to `bin` subfolder of `mystem` module's folder. Binaries can be found [here](https://tech.yandex.ru/mystem/).
+`mystem` app binary file will be downloaded to `vendor` subfolder of `mystem`
+ module's folder. Binaries retrieved from [here](https://tech.yandex.ru/mystem/).
+ To use custom binary set `MYSTEM_PATH` env variable.
+
 
 ## Usage
 
-There are two methods: `analyze(text)` and `close()`, both return promise (in first case promise will be resolved with analysis results).
+There are three methods: `analyze(text)`, `start(params)` and `close()`.
+`start` and `analyze` both return promise (in first case promise will be resolved with analysis results).
 
 ```js
 var mystem = require('mystem-wrapper');
+var myStemProcParams = 'il'
+mystem.start(myStemProcParams)
 
 mystem
 	.analyze('Жили у бабуси два веселых гуся.')
@@ -25,6 +33,8 @@ mystem
 	.catch(console.error)
 	.finally(mystem.close);
 ```
+
+for params read [doc](https://tech.yandex.ru/mystem/doc/usage-examples-docpage/)
 
 ## License
 

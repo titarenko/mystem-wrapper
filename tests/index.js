@@ -1,5 +1,6 @@
 var should = require('should');
 var mystem = require('../');
+mystem.start();
 
 describe('mystem', function () {
 	it('should analyze cyrillic sentences', function (done) {
