@@ -1,10 +1,10 @@
 {
   "name": "mystem-wrapper",
   "version": "0.2.0",
-  "description": "Yandex mystem app wrapper module",
+  "description": "Yandex mystem app wrapper module.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node bin/download-mystem.js",
+    "postinstall": "node bin/install-mystem.js",
     "test": "mocha tests"
   },
   "repository": {
@@ -31,7 +31,6 @@
     "bluebird": "^2.9.34",
     "byline": "^4.2.1",
     "lodash": "^3.10.0",
-    "mkdirp": "^0.5.1",
     "request": "^2.69.0",
     "tar.gz": "^1.0.3",
     "unzip": "^0.1.11"
